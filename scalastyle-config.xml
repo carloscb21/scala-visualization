@@ -1,0 +1,119 @@
+<scalastyle>
+ <name>Scalastyle Carlos Champa Bujaico configuration</name>
+ <check level="error" class="org.scalastyle.file.FileLengthChecker" enabled="true">
+  <parameters>
+   <parameter name="maxFileLength">1000</parameter>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.file.FileLineLengthChecker" level="warning">
+  <parameters>
+   <parameter name="maxLineLength">125</parameter>
+   <parameter name="tabSize">2</parameter>
+   <parameter name="ignoreImports">true</parameter>
+  </parameters>
+ </check>
+
+ <check level="error" class="org.scalastyle.file.HeaderMatchesChecker" enabled="true">
+  <parameters>
+   <parameter name="header"><![CDATA[/*
+ * The original author is CCB, 2020.
+ */]]></parameter>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.file.IndentationChecker" level="warning">
+  <parameters>
+   <parameter name="tabSize">2</parameter>
+   <parameter name="methodParamIndentSize">2</parameter>
+   <parameter name="classParamIndentSize">5</parameter>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.file.WhitespaceEndOfLineChecker" level="warning">
+  <parameters>
+   <parameter default="false" type="boolean" name="ignoreWhitespaceLines"/>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.scalariform.ClassNamesChecker" level="error">
+  <parameters>
+   <parameter name="regex">^[A-Z][A-Za-z]*$</parameter>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.scalariform.ClassTypeParameterChecker" level="warning">
+  <parameters>
+   <parameter name="regex">^[A-Z_]$</parameter>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.scalariform.EmptyClassChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.CyclomaticComplexityChecker" level="warning">
+  <parameters>
+   <parameter name="maximum">6</parameter>
+   <parameter name="countCases">true</parameter>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.scalariform.MethodLengthChecker" level="warning">
+  <parameters>
+   <parameter name="maxLength">125</parameter>
+   <parameter name="ignoreComments">false</parameter>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.scalariform.MultipleStringLiteralsChecker" level="warning">
+  <parameters>
+   <parameter name="allowed">1</parameter>
+   <parameter name="ignoreRegex">^\&quot;\&quot;$</parameter>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.scalariform.PatternMatchAlignChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.WhileChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.TodoCommentChecker" level="warning">
+  <parameters>
+   <parameter default="TODO|FIXME|COMMENT" type="string" name="words"/>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.scalariform.SpacesBeforePlusChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.SpacesAfterPlusChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.SpaceAfterCommentStartChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.SimplifyBooleanExpressionChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.ScalaDocChecker" level="warning">
+  <parameters>
+   <parameter name="ignoreRegex">(.*Spec$)|(.*SpecIT$)</parameter>
+   <parameter name="ignoreTokenTypes">PatDefOrDcl,TypeDefOrDcl,FunDefOrDcl,TmplDef</parameter>
+   <parameter name="ignoreOverride">false</parameter>
+   <parameter name="indentStyle">anydoc</parameter>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.scalariform.RedundantIfChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.ParameterNumberChecker" level="warning">
+  <parameters>
+   <parameter name="maxParameters">3</parameter>
+  </parameters>
+ </check>
+
+ <check enabled="true" class="org.scalastyle.scalariform.NotImplementedErrorUsage" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.NoWhitespaceBeforeLeftBracketChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.NoWhitespaceBeforeRightBracketChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.NoWhitespaceBeforeLeftBracketChecker" level="warning"/>
+
+ <check enabled="true" class="org.scalastyle.scalariform.NoWhitespaceAfterLeftBracketChecker" level="warning"/>
+
+</scalastyle>
