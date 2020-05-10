@@ -2,7 +2,7 @@
  * The original author is CCB, 2020.
  */
 
-import ccb.Example.exampleWithUrl
+//import ccb.Example.exampleWithUrl
 
 object MainScalaVegas {
 
