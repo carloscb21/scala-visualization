@@ -25,7 +25,7 @@ jobs:
       uses: actions/upload-artifact@v1
       with:
         name: Report coverage html
-        path: /home/runner/work/scala-visualization/scala-visualization/target/scala-2.11/scoverage-report/index.html
+        path: /home/runner/work/scala-visualization/scala-visualization/target/scala-2.11/scoverage-report
     - name: Run sonar
       run: sbt scalastyle
     - name: Run packacge
