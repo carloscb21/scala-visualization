@@ -9,7 +9,7 @@ import vegas.DSL.ExtendedUnitSpecBuilder
 import vegas.spec.Spec.DataFormatTypeEnums
 import vegas.spec.Spec.MarkEnums.Bar
 import vegas.spec.Spec.TypeEnums.{Nominal, Quantitative}
-//import org.apache.spark
+// import org.apache.spark
 
 object Example {
 

@@ -77,7 +77,7 @@
 
  <check enabled="true" class="org.scalastyle.scalariform.TodoCommentChecker" level="warning">
   <parameters>
-   <parameter default="TODO|FIXME|COMMENT" type="string" name="words"/>
+   <parameter name="words">TODO|FIXME</parameter>
   </parameters>
  </check>
 
