@@ -10,12 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
     - uses: actions/checkout@v2
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
@@ -27,9 +21,17 @@ jobs:
       run: sbt -Dsbt.log.noformat=true clean coverage test
     - name: Run test report
       run: sbt -Dsbt.log.noformat=true coverageReport
+    - name: Upload report coverage html
+      uses: actions/upload-artifact@v1
+      with:
+        name: Report coverage html
+        path: /home/runner/work/scala-visualization/scala-visualization/target/scala-2.11/scoverage-report/index.html
     - name: Run sonar
       run: sbt scalastyle
     - name: Run packacge
       run: sbt package
       
 
+#  [info] Written Cobertura report [/home/runner/work/scala-visualization/scala-visualization/target/scala-2.11/coverage-report/cobertura.xml]
+#  [info] Written XML coverage report [/home/runner/work/scala-visualization/scala-visualization/target/scala-2.11/scoverage-report/scoverage.xml]
+#  [info] Written HTML coverage report [/home/runner/work/scala-visualization/scala-visualization/target/scala-2.11/scoverage-report/index.html]
