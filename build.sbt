@@ -8,7 +8,19 @@ version := "0.1"
 
 scalaVersion := "2.11.12"
 
+//set scala-visualization / Test / classLoaderLayeringStrategy := ClassLoaderLayeringStrategy.ScalaLibrary
+//set scala-visualization / Test / classLoaderLayeringStrategy := ClassLoaderLayeringStrategy.Flat
 
+lazy val testingSetting = Seq(
+  fork in Test := false,
+  parallelExecution in Test := false,
+//  javaOptions in Test ++= Seq("-Xms2024m", "-Xmx6096m", "-XX:MaxPermSize=6096M", "-XX:+CMSClassUnloadingEnabled")
+  // coverageHighlighting := true,
+  // coverageMinimum := 80,
+  // coverageFailOnMinimum := false
+)
+
+libraryDependencies += "org.openjfx" % "javafx" % "11" pomOnly()
 libraryDependencies += "org.vegas-viz" %% "vegas" % "0.3.11"
 libraryDependencies += "org.apache.spark" %% "spark-core" % "2.3.4"
 libraryDependencies += "org.apache.spark" %% "spark-sql" % "2.3.4"
