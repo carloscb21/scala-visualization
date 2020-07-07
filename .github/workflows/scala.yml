@@ -18,7 +18,7 @@ jobs:
     - name: Run compile
       run: sbt compile
     - name: Run test coverage
-      run: sbt -Dsbt.log.noformat=true clean coverage test
+      run: sbt -Dsbt.log.noformat=true -Dsbt.classloader.close=false clean coverage test
     - name: Run test report
       run: sbt -Dsbt.log.noformat=true coverageReport
     - name: Upload report coverage html

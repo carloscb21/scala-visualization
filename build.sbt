@@ -11,14 +11,15 @@ scalaVersion := "2.11.12"
 //set scala-visualization / Test / classLoaderLayeringStrategy := ClassLoaderLayeringStrategy.ScalaLibrary
 //set scala-visualization / Test / classLoaderLayeringStrategy := ClassLoaderLayeringStrategy.Flat
 
-lazy val testingSetting = Seq(
-  fork in Test := false,
-  parallelExecution in Test := false,
-//  javaOptions in Test ++= Seq("-Xms2024m", "-Xmx6096m", "-XX:MaxPermSize=6096M", "-XX:+CMSClassUnloadingEnabled")
-  // coverageHighlighting := true,
-  // coverageMinimum := 80,
-  // coverageFailOnMinimum := false
-)
+//lazy val testingSetting = Seq(
+//  fork in Test := false,
+//  parallelExecution in Test := false,
+////  javaOptions in Test ++= Seq("-Xms2024m", "-Xmx6096m", "-XX:MaxPermSize=6096M", "-XX:+CMSClassUnloadingEnabled")
+//  // coverageHighlighting := true,
+//  // coverageMinimum := 80,
+//  // coverageFailOnMinimum := false
+//)
+fork in Test := false
 Test / classLoaderLayeringStrategy := ClassLoaderLayeringStrategy.ScalaLibrary
 Test / classLoaderLayeringStrategy := ClassLoaderLayeringStrategy.Flat
 
