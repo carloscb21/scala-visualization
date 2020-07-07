@@ -19,6 +19,8 @@ lazy val testingSetting = Seq(
   // coverageMinimum := 80,
   // coverageFailOnMinimum := false
 )
+Test / classLoaderLayeringStrategy := ClassLoaderLayeringStrategy.ScalaLibrary
+Test / classLoaderLayeringStrategy := ClassLoaderLayeringStrategy.Flat
 
 libraryDependencies += "org.openjfx" % "javafx" % "11" pomOnly()
 libraryDependencies += "org.vegas-viz" %% "vegas" % "0.3.11"
