@@ -8,3 +8,4 @@ project/boot/
 project/plugins/project/
 .cache
 *.log
+null/*
