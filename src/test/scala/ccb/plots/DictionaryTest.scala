@@ -8,8 +8,9 @@ import ccb.utilities.Variables._
 import org.scalatest.FunSuite
 import vegas.spec.Spec.MarkEnums.{Area, Bar}
 import vegas.spec.Spec.TypeEnums.{Nominal, Quantitative}
+import org.scalatest.{FlatSpec, Matchers}
 
-class DictionaryTest extends FunSuite {
+class DictionaryTest extends FlatSpec with Matchers {
   val country: String = "Country"
   val population: String = "Population"
   val labelsXY: LabelsXY = LabelsXY(country, population)
@@ -19,9 +20,14 @@ class DictionaryTest extends FunSuite {
   val seq: Seq[Map[String, Any]] = Seq(dict1, dict2, dict3)
 
 
-  test("Test Dictionary default"){
+  "Test Dictionary default" should "non empty string" in {
     val vegasTypes: VegasTypes = VegasTypes(Area, Quantitative, Quantitative)
     assert(Dictionary(seq, vegasTypes, labelsXY).toString.nonEmpty)
   }
+
+//  test("Test Dictionary default"){
+//    val vegasTypes: VegasTypes = VegasTypes(Area, Quantitative, Quantitative)
+//    assert(Dictionary(seq, vegasTypes, labelsXY).toString.nonEmpty)
+//  }
 
 }
